@@ -8,4 +8,4 @@ Others think they exist only on TV and one can just unit test their code and sle
 
 We are here to separate myths from reality by sharing examples of real integration faults (if they exist).
 
-Go to the [Wiki](#https://github.com/rubinovk/integration-faults/wiki) section to learn more and share your experience.
+Go to the [Wiki](https://github.com/rubinovk/integration-faults/wiki) section to learn more and share your experience.
