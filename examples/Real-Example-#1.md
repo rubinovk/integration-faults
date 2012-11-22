@@ -1,5 +1,4 @@
-This is a real world example of an [integration  
-fault](http://forums.puremvc.org/index.php?topic=308.0) that occurred in the  
+This is a real world example of an [integration fault](http://forums.puremvc.org/index.php?topic=308.0) that occurred in the  
 well-established open source project [PureMVC](http://puremvc.org/).  
   
 ### Brief description  
@@ -24,9 +23,9 @@ roles and responsibilities in your system.
   
 `Controller` has a `registerCommand(notification, command)` method for  
 registering a particular `Command` as the handler for a particular  
-`Notification`.  It's implemented such that when `registerCommand(notification,  
-command)` is called a dedicated `Observer` object is created in the `View`  
-component. Thus for each unique `Command` and `Notification` known to the  
+`Notification`.  It's implemented such that when `registerCommand(notification, command)`  
+is called a dedicated `Observer` object is created in the `View` component.  
+Thus for each unique `Command` and `Notification` known to the  
 `Controller` there are corresponding `Observers` in the `View`.   
   
 ### Failure  
