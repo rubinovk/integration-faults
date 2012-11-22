@@ -1,8 +1,8 @@
 Integration Faults
 ==================
 
-This is a point to share and collect examples of integration faults for the  
-common good.  
+This is a point to share and collect [examples](https://github.com/rubinovk/integration-faults/tree/master/examples) 
+of integration faults for the common good.  
   
 __Integration faults__ are like zombies: some people think they exist, bring a  
 lot of harm and shall be hunted down, and destroyed.  Others think they exist  
