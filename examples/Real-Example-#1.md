@@ -187,4 +187,4 @@ The test case to verify that problem is gone:
 ```
 
 ---
-[back](https://github.com/rubinovk/integration-faults/wiki)
+[back to Wiki](https://github.com/rubinovk/integration-faults/wiki)
