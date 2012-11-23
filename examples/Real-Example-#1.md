@@ -42,7 +42,7 @@ to do so.
   
 ### Source code before
 
-You can how the code looked like when the system still had a problem:
+This is how the code looked like when the system still had a problem:
 
 ```java
 	/**
@@ -86,6 +86,8 @@ You can how the code looked like when the system still had a problem:
 
 
 ### Source code after 
+
+This is how the code looked like when the problem was fixed:
 
 ```java
 	public void registerCommand( String notificationName, ICommand command )
