@@ -6,7 +6,7 @@ well-established open source project [PureMVC](http://puremvc.org/).
 System notifications trigger execution of more commands than expected when  
 commands are re-registered.  
 
-### The meat  
+## The meat  
  
 Think of the MVC pattern. This framework hides all the hassle of the component  
 relations and communication, and it gives you clear interfaces for distributing  
