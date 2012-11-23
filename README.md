@@ -11,3 +11,6 @@ We are here to separate myths from reality by sharing examples of real
 integration faults (if they exist).  
   
 ### Go to the [Wiki](https://github.com/rubinovk/integration-faults/wiki) section to learn more and share your experience.  
+
+---
+Project home page: http://rubinovk.github.com/integration-faults/
