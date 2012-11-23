@@ -28,8 +28,7 @@ twice and not only once as expected.
   
 ### What went wrong  
   
-The failure depends on the way the `Controller` component interacts with the  
-`View` component.  Unregistering the `Command` by `Controller` did not remove  
+Unregistering the `Command` by `Controller` did not remove  
 the corresponding `Observer` from the notification list in the `View`.  So when  
 `View` broadcasted some `Notification` to `Observers` there were duplicated  
 `Observers` that executed the `Command` twice upon notification.  
