@@ -42,6 +42,8 @@ to do so.
   
 ### Source code before
 
+You can how the code looked like when the system still had a problem:
+
 ```java
 	/**
 	 * Register a particular <code>ICommand</code> class as the handler for a
@@ -122,10 +124,10 @@ to do so.
 
 ### Test case
 
-Original unit test cases did not detect the problem, because they were focused
+Original unit test cases did not detect the problem, because they were focused  
 on individual components and not on their interactions.
 
-The test case to verify that problem is gone:
+This is a test case developers used to verify that problem is gone:
 
 ```java
 	/**
