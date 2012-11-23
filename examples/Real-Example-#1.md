@@ -40,9 +40,9 @@ same time `Controller` could not control the list of `Observers` in the `View`
 because `View` simply did not have `removeObserver()` method or any other means  
 to do so.  
   
-### Source code before
+## Source code 
 
-This is how the code looked like when the system still had a problem:
+This is how the `Controller`'s code looked like when the system still had a problem:
 
 ```java
 	/**
@@ -84,12 +84,10 @@ This is how the code looked like when the system still had a problem:
 	}
 ```
 
+---
+This is how the `Controller`'s code looked like when the problem was fixed:
 
-### Source code after 
-
-This is how the code looked like when the problem was fixed:
-
-(method `removeObserver()` was added to `View` but it is not shown here)
+(`View` was also modified: method `removeObserver()` was added to it, although it is not shown here)
 
 ```java
 	public void registerCommand( String notificationName, ICommand command )
@@ -131,7 +129,7 @@ This is how the code looked like when the problem was fixed:
 Original unit test cases did not detect the problem, because they were focused  
 on individual components and not on their interactions.
 
-This is a test case developers used to verify that problem is gone:
+This is a test case developers used to verify that the problem is gone:
 
 ```java
 	/**
