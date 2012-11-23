@@ -89,6 +89,8 @@ This is how the code looked like when the system still had a problem:
 
 This is how the code looked like when the problem was fixed:
 
+(method `removeObserver()` was added to `View` but it is not shown here)
+
 ```java
 	public void registerCommand( String notificationName, ICommand command )
 	{
