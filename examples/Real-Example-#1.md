@@ -5,21 +5,12 @@ well-established open source project [PureMVC](http://puremvc.org/).
   
 System notifications trigger execution of more commands than expected when  
 commands are re-registered.  
-  
-### System  
-  
-_PureMVC_ is a lightweight framework for creating applications based upon the  
-classic Model-View-Controller design pattern.  _PureMVC_ implements a  
-publish/subscribe-style observer notification scheme that allows asynchronous  
-event-driven communications between the actors in the system.  It is ported to  
-ActionScript 2/3, C++, C#, ColdFusion, Dart, Haxe, Java, JavaScript, Objective  
-C, Perl, PHP, Python, Ruby, TypeScript!  
-  
+
+### The meat  
+ 
 Think of the MVC pattern. This framework hides all the hassle of the component  
 relations and communication, and it gives you clear interfaces for distributing  
 roles and responsibilities in your system.  
-  
-### Relevant details  
   
 `Controller` has a `registerCommand(notification, command)` method for  
 registering a particular `Command` as the handler for a particular  
@@ -185,6 +176,15 @@ The test case to verify that problem is gone:
 
 	} 
 ```
+
+### FYI  
+  
+_PureMVC_ is a lightweight framework for creating applications based upon the  
+classic Model-View-Controller design pattern.  _PureMVC_ implements a  
+publish/subscribe-style observer notification scheme that allows asynchronous  
+event-driven communications between the actors in the system.  It is ported to  
+ActionScript 2/3, C++, C#, ColdFusion, Dart, Haxe, Java, JavaScript, Objective  
+C, Perl, PHP, Python, Ruby, TypeScript!  
 
 ---
 [back to Wiki](https://github.com/rubinovk/integration-faults/wiki)
