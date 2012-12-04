@@ -2,8 +2,8 @@
 
 This is a real world example of a __borderline__ fault that occurred in [Android 4.2](https://code.google.com/p/android/issues/detail?id=39692).
 
-> This is not a pure integration fault - this is a borderline of unit and integration fault.
-> The problem mostly belongs to one class `NumberPicker`, it is exposed by the interaction of two classes `DatePicker` and `NumberPicker`.
+This is not a pure integration fault - this is a borderline of unit and integration fault.
+The problem mostly belongs to one class `NumberPicker`, it is exposed by the interaction of two classes `DatePicker` and `NumberPicker`.
   
 ### Brief description  
   
