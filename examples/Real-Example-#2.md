@@ -9,7 +9,7 @@ The problem mostly belongs to one class `NumberPicker`, it is exposed by the int
   
 Missing month December when adding new event in the calendar from contact list.
 
-![ScreenShot](/images/android-december.png)
+![ScreenShot](https://raw.github.com/rubinovk/integration-faults/master/examples/images/android-december.png)
 
 ## The meat  
 
