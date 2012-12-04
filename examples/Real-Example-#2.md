@@ -71,7 +71,7 @@ To summarize: the problem comes from the lack of documentation about the relatio
         /* ... */
 ```        
 
-`NumberPicker`'s methods before [fix](https://github.com/android/platform_frameworks_base/commit/7018cfdc05dc6135949806749ff5c370dce09ced):
+`NumberPicker`'s code before [fix](https://github.com/android/platform_frameworks_base/commit/7018cfdc05dc6135949806749ff5c370dce09ced):
 
 ```java
     public void setDisplayedValues(String[] displayedValues) {
@@ -100,7 +100,7 @@ To summarize: the problem comes from the lack of documentation about the relatio
     }
 ```
 
-`NumberPicker`'s methods after [fix](https://github.com/android/platform_frameworks_base/commit/7018cfdc05dc6135949806749ff5c370dce09ced):
+`NumberPicker`'s code after [fix](https://github.com/android/platform_frameworks_base/commit/7018cfdc05dc6135949806749ff5c370dce09ced):
 
 ```java
      /**
