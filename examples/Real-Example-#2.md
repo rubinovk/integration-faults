@@ -1,12 +1,13 @@
 # Unit fault in Android `DatePicker`
 
-This is a real world example of a [borderline fault](https://code.google.com/p/android/issues/detail?id=39692) that occurred in Android 4.2.
+This is a real world example of a borderline fault that occurred in [Android 4.2](https://code.google.com/p/android/issues/detail?id=39692).
 
 This fault is a borderline of unit and integration fault.  Although the problem mostly belongs to one class `NumberPicker`, it is exposed by the interaction of two classes `DatePicker` and `NumberPicker`.
   
 ### Brief description  
   
 Missing month December when adding new event in the calendar from contact list.
+
 ![ScreenShot](https://android.googlecode.com/issues/attachment?aid=396920000000&name=Screenshot_2012-11-15-12-42-36.png&token=0dwjif79fp2StvUekdZzPsOXfQM%3A1354615411947&inline=1)
 
 ## The meat  
@@ -15,7 +16,7 @@ Missing month December when adding new event in the calendar from contact list.
   
 ### Failure  
   
-`DatePicker` uses `NumberPicker` to set `maxValue` to 12 as the string array "months" is only 12 entries long.
+`DatePicker` uses `NumberPicker` to set `maxValue` to 12 for the string array "months" that is 12 entries long.
 
 ```java
             mMonthPicker.setMinValue(1);
@@ -23,7 +24,13 @@ Missing month December when adding new event in the calendar from contact list.
             mMonthPicker.setDisplayedValues(months);
 ```
 
-However, `NumberPicker` adjusts the min/max values and `maxValue` gets truncated in the method `setDisplayedValues()` of `NumberPicker` to 11 which in the end will skip "December" as it is the 12th and last month.   
+However, the values change as soon as the display values are set via `setDisplayedValues(String[])`. `maxValue` gets truncated to 11 which in the end skips "December" as it is the 12th and last month.
+
+### Root cause  
+
+The documentation for `setMinValue()` and `setMaxValue()` says: "Sets the min value of the picker." and "Sets the max value of the picker." respectively.
+
+`maxValue` gets truncated to 11, because in the method `setDisplayedValues(String[])` the values in the range represent the indices of the array:
 
 ```java
             if (getMaxValue() >= displayedValues.length) {
@@ -31,27 +38,8 @@ However, `NumberPicker` adjusts the min/max values and `maxValue` gets truncated
             }
 ```
 
-### Root cause  
-
-The documentation for `setMinValue` and `setMaxValue` says: "Sets the min value of the picker." and "Sets the max value of the picker." respectively.
-
-Thus,  
-
-```java
-            mMonthPicker.setMinValue(0);
-            mMonthPicker.setMaxValue(11);
-```
-
-will allow entering the values from 0-11.
-
-However, the result will change as soon as you set the display values via `setDisplayedValues()`. As now values in the range represent the indices of the array ("months").
-This change of behaviour and lack of documentation on what is intended is the real problem.
+To summarize: the problem comes from the lack of documentation about the relations between the methods of a class `NumberPicker`: `setMinValue()`, `setMaxValue()` and `setDisplayedValues(String[])`.
                                                               
-Finally: The length of the displayed values array set via `setDisplayedValues(String[])`
-must be equal to the range of selectable numbers which is equal to
-`getMaxValue() - getMinValue() + 1`.
-
-
 ## Source code 
 
 `DatePicker`'s code stays as is:    
